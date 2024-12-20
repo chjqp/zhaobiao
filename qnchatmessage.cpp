@@ -536,6 +536,7 @@ void QNChatMessage::paintEvent(QPaintEvent *event)
         painter.setFont(font);
         painter.setPen(Qt::black); // 使用黑色字体
 
+        // 设置矩形区域来绘制昵称和职称，调整了它们之间的间距
         QRect nameRect(m_iconRightRect.x(), m_iconRightRect.bottom() + 5, m_iconRightRect.width(), 18);
         QRect titleRect(m_iconRightRect.x(), m_iconRightRect.bottom() + 23, m_iconRightRect.width(), 18);
 
