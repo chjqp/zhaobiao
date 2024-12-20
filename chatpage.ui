@@ -132,7 +132,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="ClickedLabel" name="file_lb_2">
+      <widget class="ClickedLabel" name="file_lb">
        <property name="styleSheet">
         <string notr="true">border-image: url(:/res/filedir_hover.png);</string>
        </property>
@@ -142,7 +142,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </widget>
      </item>
      <item>
-      <widget class="ClickedLabel" name="emo_lb_2">
+      <widget class="ClickedLabel" name="pic_lb">
        <property name="styleSheet">
         <string notr="true">border-image: url(:/res/chat_icon.png);</string>
        </property>
@@ -152,7 +152,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </widget>
      </item>
      <item>
-      <widget class="ClickedLabel" name="pic_lb_2">
+      <widget class="ClickedLabel" name="emo_lb">
        <property name="styleSheet">
         <string notr="true">border-image: url(:/res/smile_press.png);</string>
        </property>

@@ -33,7 +33,7 @@ public:
     QWidget *widget_6;
     QTextBrowser *textBrowser_3;
     QListWidget *listWidget_3;
-    QTextBrowser *textBrowser_4;
+    QTextBrowser *textBrowser;
     ChatPage *chat_data_widget;
 
     void setupUi(QDialog *ChatDialog)
@@ -69,9 +69,9 @@ public:
         listWidget_3 = new QListWidget(widget_3);
         listWidget_3->setObjectName("listWidget_3");
         listWidget_3->setGeometry(QRect(-5, 171, 251, 461));
-        textBrowser_4 = new QTextBrowser(widget_3);
-        textBrowser_4->setObjectName("textBrowser_4");
-        textBrowser_4->setGeometry(QRect(0, 170, 256, 391));
+        textBrowser = new QTextBrowser(widget_3);
+        textBrowser->setObjectName("textBrowser");
+        textBrowser->setGeometry(QRect(0, 170, 256, 391));
         chat_data_widget = new ChatPage(ChatDialog);
         chat_data_widget->setObjectName("chat_data_widget");
         chat_data_widget->setGeometry(QRect(230, 0, 771, 631));
@@ -108,7 +108,7 @@ public:
                         " margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700;\">\350\257\204\346\240\207\347\272\252\345\276\213\345\274\272\350\260\203\357\274\232</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700;\">1.\344\270\245\346\240\274\346\214\211\350\257\204\346\240\207\345\212\236\346\263\225\347\213\254\347\253\213\350\257\204\345\256\241!</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:700;\">2.\344\270\245\350\260\250\344\275\277\347\224\250\344\273\273\344\275\225\351\200\232\350\256\257\345\267\245\345\205\267!</span></p></body></html>", nullptr));
-        textBrowser_4->setHtml(QCoreApplication::translate("ChatDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        textBrowser->setHtml(QCoreApplication::translate("ChatDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "hr { height: 1px; border-width: 0; }\n"

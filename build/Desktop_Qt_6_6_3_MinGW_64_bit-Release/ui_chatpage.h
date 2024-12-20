@@ -38,9 +38,9 @@ public:
     QWidget *widget_17;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_6;
-    ClickedLabel *file_lb_2;
-    ClickedLabel *emo_lb_2;
-    ClickedLabel *pic_lb_2;
+    ClickedLabel *file_lb;
+    ClickedLabel *pic_lb;
+    ClickedLabel *emo_lb;
     QToolButton *send_btn_2;
     QTextEdit *textEdit;
     QListWidget *listWidget;
@@ -100,23 +100,23 @@ public:
         horizontalLayoutWidget_2->setGeometry(QRect(10, 520, 101, 41));
         horizontalLayout_6 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_6->setObjectName("horizontalLayout_6");
-        file_lb_2 = new ClickedLabel(horizontalLayoutWidget_2);
-        file_lb_2->setObjectName("file_lb_2");
-        file_lb_2->setStyleSheet(QString::fromUtf8("border-image: url(:/res/filedir_hover.png);"));
+        file_lb = new ClickedLabel(horizontalLayoutWidget_2);
+        file_lb->setObjectName("file_lb");
+        file_lb->setStyleSheet(QString::fromUtf8("border-image: url(:/res/filedir_hover.png);"));
 
-        horizontalLayout_6->addWidget(file_lb_2);
+        horizontalLayout_6->addWidget(file_lb);
 
-        emo_lb_2 = new ClickedLabel(horizontalLayoutWidget_2);
-        emo_lb_2->setObjectName("emo_lb_2");
-        emo_lb_2->setStyleSheet(QString::fromUtf8("border-image: url(:/res/chat_icon.png);"));
+        pic_lb = new ClickedLabel(horizontalLayoutWidget_2);
+        pic_lb->setObjectName("pic_lb");
+        pic_lb->setStyleSheet(QString::fromUtf8("border-image: url(:/res/chat_icon.png);"));
 
-        horizontalLayout_6->addWidget(emo_lb_2);
+        horizontalLayout_6->addWidget(pic_lb);
 
-        pic_lb_2 = new ClickedLabel(horizontalLayoutWidget_2);
-        pic_lb_2->setObjectName("pic_lb_2");
-        pic_lb_2->setStyleSheet(QString::fromUtf8("border-image: url(:/res/smile_press.png);"));
+        emo_lb = new ClickedLabel(horizontalLayoutWidget_2);
+        emo_lb->setObjectName("emo_lb");
+        emo_lb->setStyleSheet(QString::fromUtf8("border-image: url(:/res/smile_press.png);"));
 
-        horizontalLayout_6->addWidget(pic_lb_2);
+        horizontalLayout_6->addWidget(emo_lb);
 
         send_btn_2 = new QToolButton(chat_data_list);
         send_btn_2->setObjectName("send_btn_2");
@@ -170,9 +170,9 @@ public:
         toolButton_13->setText(QString());
         toolButton_14->setText(QString());
         toolButton_15->setText(QString());
-        file_lb_2->setText(QString());
-        emo_lb_2->setText(QString());
-        pic_lb_2->setText(QString());
+        file_lb->setText(QString());
+        pic_lb->setText(QString());
+        emo_lb->setText(QString());
         send_btn_2->setText(QString());
         sendButton->setText(QString());
     } // retranslateUi

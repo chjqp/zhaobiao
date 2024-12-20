@@ -133,7 +133,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      </rect>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser_4">
+   <widget class="QTextBrowser" name="textBrowser">
     <property name="geometry">
      <rect>
       <x>0</x>

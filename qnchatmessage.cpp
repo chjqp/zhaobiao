@@ -342,6 +342,125 @@ QSize QNChatMessage::getRealString(QString src)
 
 
 // paintEvent 中绘制名字和职称
+// void QNChatMessage::paintEvent(QPaintEvent *event)
+// {
+//     Q_UNUSED(event);
+
+//     QPainter painter(this);
+//     painter.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform); // 消除锯齿
+//     painter.setPen(Qt::NoPen);
+//     painter.setBrush(QBrush(Qt::gray));
+
+//     if (m_userType == User_Type::User_She) {  // 对方消息
+//         // 头像
+//         painter.drawPixmap(m_iconLeftRect, m_leftPixmap);
+
+//         // 昵称和职称
+//         QFont font = this->font();
+//         font.setPointSize(12); // 设置字体大小
+//         font.setWeight(QFont::Bold); // 设置字体粗体
+//         painter.setFont(font);
+//         painter.setPen(QColor(169, 169, 169)); // 使用浅灰色字体
+
+//         // 设置矩形区域来绘制昵称和职称，调整了它们之间的间距
+//         QRect nameRect(m_iconLeftRect.x(), m_iconLeftRect.bottom() + 5, m_iconLeftRect.width(), 18);
+//         QRect titleRect(m_iconLeftRect.x(), m_iconLeftRect.bottom() + 23, m_iconLeftRect.width(), 18);
+
+//         // 绘制昵称和职称
+//         painter.drawText(nameRect, Qt::AlignCenter, m_userName);
+//         painter.drawText(titleRect, Qt::AlignCenter, m_userTitle);
+
+//         // 消息框加边框
+//         QColor col_KuangB(234, 234, 234);
+//         painter.setBrush(QBrush(col_KuangB));
+//         painter.drawRoundedRect(m_kuangLeftRect.x() - 1, m_kuangLeftRect.y() - 1, m_kuangLeftRect.width() + 2, m_kuangLeftRect.height() + 2, 4, 4);
+
+//         // 消息框
+//         QColor col_Kuang(255, 255, 255);
+//         painter.setBrush(QBrush(col_Kuang));
+//         painter.drawRoundedRect(m_kuangLeftRect, 4, 4);
+
+//         // 消息三角
+//         QPointF points[3] = {
+//             QPointF(m_sanjiaoLeftRect.x(), 30),
+//             QPointF(m_sanjiaoLeftRect.x() + m_sanjiaoLeftRect.width(), 25),
+//             QPointF(m_sanjiaoLeftRect.x() + m_sanjiaoLeftRect.width(), 35),
+//         };
+//         QPen pen;
+//         pen.setColor(col_Kuang);
+//         painter.setPen(pen);
+//         painter.drawPolygon(points, 3);
+
+//         // 三角加边
+//         QPen penSanJiaoBian;
+//         penSanJiaoBian.setColor(col_KuangB);
+//         painter.setPen(penSanJiaoBian);
+//         painter.drawLine(QPointF(m_sanjiaoLeftRect.x() - 1, 30), QPointF(m_sanjiaoLeftRect.x() + m_sanjiaoLeftRect.width(), 24));
+//         painter.drawLine(QPointF(m_sanjiaoLeftRect.x() - 1, 30), QPointF(m_sanjiaoLeftRect.x() + m_sanjiaoLeftRect.width(), 36));
+
+//         // 绘制消息内容
+//         QPen penText;
+//         penText.setColor(QColor(51, 51, 51)); // 黑色字体
+//         painter.setPen(penText);
+//         QTextOption option(Qt::AlignLeft | Qt::AlignVCenter);
+//         option.setWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+//         painter.setFont(this->font());
+//         painter.drawText(m_textLeftRect, m_msg, option);
+//     } else if (m_userType == User_Type::User_Me) {  // 自己消息
+//         // 头像
+//         painter.drawPixmap(m_iconRightRect, m_rightPixmap);
+
+//         // 昵称和职称
+//         QFont font = this->font();
+//         font.setPointSize(12); // 设置字体大小
+//         font.setWeight(QFont::Bold); // 设置字体粗体
+//         painter.setFont(font);
+//         painter.setPen(Qt::black); // 使用黑色字体
+
+//         QRect nameRect(m_iconRightRect.x(), m_iconRightRect.bottom() + 5, m_iconRightRect.width(), 18);
+//         QRect titleRect(m_iconRightRect.x(), m_iconRightRect.bottom() + 23, m_iconRightRect.width(), 18);
+
+//         // 绘制昵称和职称
+//         painter.drawText(nameRect, Qt::AlignCenter, m_userName);
+//         painter.drawText(titleRect, Qt::AlignCenter, m_userTitle);
+
+//         // 消息框
+//         QColor col_Kuang(75, 164, 242);
+//         painter.setBrush(QBrush(col_Kuang));
+//         painter.drawRoundedRect(m_kuangRightRect, 4, 4);
+
+//         // 消息三角
+//         QPointF points[3] = {
+//             QPointF(m_sanjiaoRightRect.x() + m_sanjiaoRightRect.width(), 30),
+//             QPointF(m_sanjiaoRightRect.x(), 25),
+//             QPointF(m_sanjiaoRightRect.x(), 35),
+//         };
+//         QPen pen;
+//         pen.setColor(col_Kuang);
+//         painter.setPen(pen);
+//         painter.drawPolygon(points, 3);
+
+//         // 绘制消息内容
+//         QPen penText;
+//         penText.setColor(Qt::white); // 消息内容为白色字体
+//         painter.setPen(penText);
+//         QTextOption option(Qt::AlignLeft | Qt::AlignVCenter);
+//         option.setWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+//         painter.setFont(this->font());
+//         painter.drawText(m_textRightRect, m_msg, option);
+//     } else if (m_userType == User_Type::User_Time) {  // 时间消息
+//         QPen penText;
+//         penText.setColor(QColor(153, 153, 153)); // 使用浅灰色字体
+//         painter.setPen(penText);
+//         QTextOption option(Qt::AlignCenter);
+//         option.setWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+//         QFont te_font = this->font();
+//         te_font.setFamily("MicrosoftYaHei");
+//         te_font.setPointSize(10);
+//         painter.setFont(te_font);
+//         painter.drawText(this->rect(), m_curTime, option);
+//     }
+// }
 void QNChatMessage::paintEvent(QPaintEvent *event)
 {
     Q_UNUSED(event);
