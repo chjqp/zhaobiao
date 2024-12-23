@@ -14,10 +14,16 @@ class ChatDialog : public QDialog
 public:
     explicit ChatDialog(QWidget *parent = nullptr);
     ~ChatDialog();
-    void addChatUserList();
+
+private slots:
+    void on_pushButtonUpload_clicked();
 
 private:
     Ui::ChatDialog *ui;
+
+    void addChatUserList();
+    void handleLinkClicked(const QUrl &url);
+    void addClickableFile(const QString &filePath, const QString &displayName);
 };
 
 #endif // CHATDIALOG_H

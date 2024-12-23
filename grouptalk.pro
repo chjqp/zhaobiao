@@ -19,7 +19,8 @@ SOURCES += \
     listitembase.cpp \
     main.cpp \
     mainwindow.cpp\
-    qnchatmessage.cpp
+    qnchatmessage.cpp \
+    userwidget.cpp
 
 HEADERS += \
     chatuserwid.h \
@@ -31,18 +32,20 @@ HEADERS += \
     global.h \
     listitembase.h \
     mainwindow.h\
-    qnchatmessage.h
+    qnchatmessage.h \
+    userwidget.h
 
 FORMS += \
     chatdialog.ui \
     chatpage.ui \
     chatuserwid.ui \
     mainwindow.ui\
+    userwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
+include ($$PWD/chatmessage/chatmessage.pri)
 RESOURCES += \
     rc.qrc

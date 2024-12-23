@@ -50,7 +50,7 @@ public:
     {
         if (ChatPage->objectName().isEmpty())
             ChatPage->setObjectName("ChatPage");
-        ChatPage->resize(905, 637);
+        ChatPage->resize(905, 721);
         chat_data_list = new ChatView(ChatPage);
         chat_data_list->setObjectName("chat_data_list");
         chat_data_list->setGeometry(QRect(0, -9, 841, 761));
@@ -69,7 +69,7 @@ public:
         title_edit_2->setGeometry(QRect(0, 10, 1081, 71));
         layoutWidget_4 = new QWidget(chat_data_list);
         layoutWidget_4->setObjectName("layoutWidget_4");
-        layoutWidget_4->setGeometry(QRect(140, 680, 132, 25));
+        layoutWidget_4->setGeometry(QRect(10, 514, 102, 61));
         horizontalLayout_5 = new QHBoxLayout(layoutWidget_4);
         horizontalLayout_5->setObjectName("horizontalLayout_5");
         toolButton_13 = new QToolButton(layoutWidget_4);
@@ -97,7 +97,7 @@ public:
 
         horizontalLayoutWidget_2 = new QWidget(chat_data_list);
         horizontalLayoutWidget_2->setObjectName("horizontalLayoutWidget_2");
-        horizontalLayoutWidget_2->setGeometry(QRect(10, 520, 101, 41));
+        horizontalLayoutWidget_2->setGeometry(QRect(340, 650, 101, 41));
         horizontalLayout_6 = new QHBoxLayout(horizontalLayoutWidget_2);
         horizontalLayout_6->setObjectName("horizontalLayout_6");
         file_lb = new ClickedLabel(horizontalLayoutWidget_2);

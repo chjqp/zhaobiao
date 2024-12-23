@@ -27,6 +27,8 @@ protected:
 private slots:
     void on_sendButton_clicked();
 
+    void on_toolButton_14_clicked();
+
 private:
     Ui::ChatPage *ui;
 };

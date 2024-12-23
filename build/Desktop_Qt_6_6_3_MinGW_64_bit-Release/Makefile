@@ -376,10 +376,12 @@ Makefile: ../../grouptalk.pro ../../../../componentsqt/6.6.3/mingw_64/mkspecs/wi
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/qt_config.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/win32-g++/qmake.conf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/exclusive_builds.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/toolchain.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/default_pre.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/win32/default_pre.prf \
+		../../chatmessage/chatmessage.pri \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/resolve_config.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/exclusive_builds_post.prf \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/default_post.prf \
@@ -405,7 +407,6 @@ Makefile: ../../grouptalk.pro ../../../../componentsqt/6.6.3/mingw_64/mkspecs/wi
 		../../../../componentsqt/6.6.3/mingw_64/lib/Qt6Gui.prl \
 		../../../../componentsqt/6.6.3/mingw_64/lib/Qt6Core.prl \
 		../../../../componentsqt/6.6.3/mingw_64/lib/Qt6EntryPoint.prl \
-		.qmake.stash \
 		../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/build_pass.prf \
 		../../rc.qrc
 	$(QMAKE) -o Makefile ..\..\grouptalk.pro -spec win32-g++ "CONFIG+=qtquickcompiler"
@@ -715,10 +716,12 @@ Makefile: ../../grouptalk.pro ../../../../componentsqt/6.6.3/mingw_64/mkspecs/wi
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/qt_config.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/win32-g++/qmake.conf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/exclusive_builds.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/toolchain.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/default_pre.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/win32/default_pre.prf:
+../../chatmessage/chatmessage.pri:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/resolve_config.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/exclusive_builds_post.prf:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/default_post.prf:
@@ -744,7 +747,6 @@ Makefile: ../../grouptalk.pro ../../../../componentsqt/6.6.3/mingw_64/mkspecs/wi
 ../../../../componentsqt/6.6.3/mingw_64/lib/Qt6Gui.prl:
 ../../../../componentsqt/6.6.3/mingw_64/lib/Qt6Core.prl:
 ../../../../componentsqt/6.6.3/mingw_64/lib/Qt6EntryPoint.prl:
-.qmake.stash:
 ../../../../componentsqt/6.6.3/mingw_64/mkspecs/features/build_pass.prf:
 ../../rc.qrc:
 qmake: FORCE

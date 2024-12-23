@@ -9,6 +9,13 @@ debug/listitembase.o
 debug/main.o
 debug/mainwindow.o
 debug/qnchatmessage.o
+debug/userwidget.o
+debug/MessageUtil.o
+debug/CommonUtils.o
+debug/ChatItemMsgText.o
+debug/ChatItemMsgImg.o
+debug/ChatItemMsgFile.o
+debug/ChatItemMsg.o
 debug/qrc_rc.o
 debug/moc_chatuserwid.o
 debug/moc_chatview.o
@@ -19,3 +26,9 @@ debug/moc_clickedlabel.o
 debug/moc_listitembase.o
 debug/moc_mainwindow.o
 debug/moc_qnchatmessage.o
+debug/moc_userwidget.o
+debug/moc_MessageUtil.o
+debug/moc_ChatItemMsgText.o
+debug/moc_ChatItemMsgImg.o
+debug/moc_ChatItemMsgFile.o
+debug/moc_ChatItemMsg.o

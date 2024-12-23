@@ -139,3 +139,9 @@ void ChatPage::resizeEvent(QResizeEvent *event)
         dealMessage(messageW, item, messageW->text(), messageW->time(), messageW->userType());
     }
 }
+
+void ChatPage::on_toolButton_14_clicked()
+{
+
+}
+

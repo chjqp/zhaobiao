@@ -9,6 +9,13 @@ release/listitembase.o
 release/main.o
 release/mainwindow.o
 release/qnchatmessage.o
+release/userwidget.o
+release/MessageUtil.o
+release/CommonUtils.o
+release/ChatItemMsgText.o
+release/ChatItemMsgImg.o
+release/ChatItemMsgFile.o
+release/ChatItemMsg.o
 release/qrc_rc.o
 release/moc_chatuserwid.o
 release/moc_chatview.o
@@ -19,3 +26,9 @@ release/moc_clickedlabel.o
 release/moc_listitembase.o
 release/moc_mainwindow.o
 release/moc_qnchatmessage.o
+release/moc_userwidget.o
+release/moc_MessageUtil.o
+release/moc_ChatItemMsgText.o
+release/moc_ChatItemMsgImg.o
+release/moc_ChatItemMsgFile.o
+release/moc_ChatItemMsg.o

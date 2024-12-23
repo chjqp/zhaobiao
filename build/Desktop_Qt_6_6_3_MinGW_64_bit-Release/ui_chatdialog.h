@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QListWidget>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolButton>
@@ -35,6 +36,7 @@ public:
     QListWidget *listWidget_3;
     QTextBrowser *textBrowser;
     ChatPage *chat_data_widget;
+    QPushButton *pushButtonUpload;
 
     void setupUi(QDialog *ChatDialog)
     {
@@ -76,6 +78,9 @@ public:
         chat_data_widget->setObjectName("chat_data_widget");
         chat_data_widget->setGeometry(QRect(230, 0, 771, 631));
         chat_data_widget->setLayoutDirection(Qt::LayoutDirection::LeftToRight);
+        pushButtonUpload = new QPushButton(ChatDialog);
+        pushButtonUpload->setObjectName("pushButtonUpload");
+        pushButtonUpload->setGeometry(QRect(1170, 20, 93, 28));
 
         retranslateUi(ChatDialog);
 
@@ -117,6 +122,7 @@ public:
 "</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" color:#55ffff;\">\351\241\271\347\233\256\346\226\207\344\273\266\345\210\227\350\241\250</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        pushButtonUpload->setText(QCoreApplication::translate("ChatDialog", "\344\270\212\344\274\240\346\226\207\344\273\266", nullptr));
     } // retranslateUi
 
 };
